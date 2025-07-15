@@ -88,40 +88,15 @@ Buka folder view/artikel sesuaikan masing-masing view.
 
 ![image](https://github.com/user-attachments/assets/30fd0aa7-026b-4169-b8f8-9187ba842a69)
 
-7. Testing
-Lakukan uji coba untuk memastikan semua fungsi berjalan dengan baik:
-• Menampilkan daftar artikel dengan nama kategori.
-
-![Screenshot 2025-06-26 162943](https://github.com/user-attachments/assets/7b040134-b964-4330-bf7c-797a2b544db8)
-
-• Menambah artikel baru dengan memilih kategori.
-
-![Screenshot 2025-06-26 162844](https://github.com/user-attachments/assets/006dfb1a-61d1-4a0e-9874-f7e1463dcd2d)
-
-• Mengedit artikel dan mengubah kategorinya.
-
-![Screenshot 2025-06-26 162722](https://github.com/user-attachments/assets/bbe0f244-6e29-492f-aa3e-98941db7e438)
-
-
-• Menghapus artikel.
-
-sebelum:
-![Screenshot 2025-06-26 162515](https://github.com/user-attachments/assets/aaf07732-1068-4a03-8910-874324fdf3be)
-
-sesudah:
-
-![Screenshot 2025-06-26 162610](https://github.com/user-attachments/assets/bbea2073-1b23-4050-8830-7f9bc5011437)
-
-
-8. Membuat Model.
+7. Membuat Model.
 Pada modul sebelumnya sudah dibuat ArtikelModel, pada modul ini kita akan
 memanfaatkan model tersebut agar dapat diakses melalui AJAX.
 
-9. Membuat AJAX Controller
+8. Membuat AJAX Controller
 
 ![image](https://github.com/user-attachments/assets/46c90da8-8852-4a70-9d5d-2e0d27bb0971)
 
-10. Membuat View
+9. Membuat View
 
 ![image](https://github.com/user-attachments/assets/89bec5c2-f3e3-4f14-93b8-19b4ab526df1)
 
@@ -131,13 +106,13 @@ memanfaatkan model tersebut agar dapat diakses melalui AJAX.
 
 ![image](https://github.com/user-attachments/assets/ce508026-8ca8-4f8c-8c6c-c7ebe322d0d1)
 
-11. Persiapan
+10. Persiapan
 * Pastikan MySQL Server sudah berjalan.
 * Buka database `lab_ci4`.
 * Pastikan tabel `artikel` dan `kategori` sudah ada dan terisi data.
 * Pastikan library jQuery sudah terpasang atau dapat diakses melalui CDN.
 
-12. Modifikasi Controller Artikel
+11. Modifikasi Controller Artikel
 Ubah method `admin_index()` di `Artikel.php` untuk mengembalikan data dalam format
 JSON jika request adalah AJAX. (Sama seperti modul sebelumnya)
 
@@ -153,7 +128,7 @@ AJAX.
 • Jika AJAX, kembalikan data artikel dan pager dalam format JSON.
 • Jika bukan AJAX, tampilkan view seperti biasa.
 
-13. Modifikasi View (admin_index.php)
+12. Modifikasi View (admin_index.php)
 * Ubah view `admin_index.php` untuk menggunakan jQuery.
 * Hapus kode yang menampilkan tabel artikel dan pagination secara langsung.
 * Tambahkan elemen untuk menampilkan data artikel dan pagination dari AJAX.
@@ -166,30 +141,6 @@ AJAX.
 ![image](https://github.com/user-attachments/assets/dc7a12a7-abb3-4179-b387-368887550d1f)
 
 ![image](https://github.com/user-attachments/assets/c633d358-dbb9-49d0-a186-0fbe3bc85f6a)
-
-Pertanyaan dan Tugas
-1. Selesaikan semua langkah praktikum di atas.
-2. Modifikasi tampilan data artikel dan pagination sesuai kebutuhan desain.
-
-![Screenshot 2025-06-19 214251](https://github.com/user-attachments/assets/33b43aed-d99a-45ac-9182-de22a769b9fa)
-
-3. Tambahkan indikator loading saat data sedang diambil dari server.
-
-![alt text](image-1.png)
-
-4. Implementasikan fitur sorting (mengurutkan artikel berdasarkan judul, dll.) dengan AJAX.
-
-Berdasarkan ID:
-
-![Screenshot 2025-06-26 162143](https://github.com/user-attachments/assets/f7a4607f-6c4d-496d-a8fd-14ac28dde2b5)
-
-Berdasarkan Judul:
-
-![Screenshot 2025-06-26 162041](https://github.com/user-attachments/assets/1e0c2fd0-159c-4b9d-85bc-a83b9e76d4c0)
-
-Berdasarkan Kategori:
-
-![Screenshot 2025-06-26 161455](https://github.com/user-attachments/assets/f77379fa-bcab-4c95-af7c-6126799df2ea)
 
 
 14. Persiapan
@@ -220,7 +171,7 @@ Kode diatas berisi 5 method, yaitu:
 • update() – Berfungsi untuk mengubah suatu data pada database.
 • delete() – Berfungsi untuk menghapus data dari database.
 
-17. Membuat Routing REST API
+16. Membuat Routing REST API
 Untuk mengakses REST API CodeIgniter, kita perlu mendefinisikan route-nya terlebih dulu.
 Caranya, masuklah ke direktori app/Config dan bukalah file Routes.php. Tambahkan kode
 di bawah ini:
@@ -239,12 +190,12 @@ Seperti yang terlihat, satu baris kode routes yang di tambahkan akan menghasilka
 Endpoint.
 Selanjutnya melakukan uji coba terhadap REST API CodeIgniter.
 
-18. Testing REST API CodeIgniter
+17. Testing REST API CodeIgniter
 Buka aplikasi postman dan pilih create new → HTTP Request
 
 ![image](https://github.com/user-attachments/assets/890a0541-a634-4ff5-8dbd-685eca172ffc)
 
-19. Menampilkan Semua Data
+18. Menampilkan Semua Data
 Pilih method GET dan masukkan URL berikut:
 http://localhost:8080/post
 Lalu, klik Send. Jika hasil test menampilkan semua data artikel dari database, maka pengujian
@@ -252,7 +203,7 @@ berhasil.
 
 ![image](https://github.com/user-attachments/assets/f64d2583-357d-4ccf-9827-49f82399ed25)
 
-20. Menampilkan Data Spesifik
+29. Menampilkan Data Spesifik
 Masih menggunakan method GET, hanya perlu menambahkan ID artikel di belakang URL
 seperti ini:
 http://localhost:8080/post/2
@@ -261,7 +212,7 @@ nomor 2 di database.
 
 ![image](https://github.com/user-attachments/assets/6ee45f3c-3175-4ab3-b058-c757f410a51d)
 
-21. Mengubah Data
+20. Mengubah Data
 Untuk mengubah data, silakan ganti method menjadi PUT. Kemudian, masukkan URL artikel
 yang ingin diubah. Misalnya, ingin mengubah data artikel dengan ID nomor 2, maka masukkan
 URL berikut:
@@ -272,7 +223,7 @@ klik Send.
 
 ![image](https://github.com/user-attachments/assets/483f730c-5453-4b60-84d6-c2d124b96d47)
 
-22. Menambahkan Data
+21. Menambahkan Data
 Anda perlu menggunakan method POST untuk menambahkan data baru ke database.
 Kemudian, masukkan URL berikut:
 http://localhost:8080/post
@@ -281,7 +232,7 @@ dan nilai data baru di kolom VALUE. Jangan lupa, klik Send.
 
 ![image](https://github.com/user-attachments/assets/99d40810-b938-4228-b0cd-ee101d37875c)
 
-23. Menghapus Data
+22. Menghapus Data
 Pilih method DELETE untuk menghapus data. Lalu, masukkan URL spesifik data mana yang
 ingin di hapus. Misalnya, ingin menghapus data nomor 3, maka URL-nya seperti ini:
 http://localhost:8080/post/3
